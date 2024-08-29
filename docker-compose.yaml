@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: product
+      MYSQL_USER: user
+      MYSQL_PASSWORD: admin
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  flask:
+    build: ./src
+    container_name: flask_api
+    environment:
+      - APP_NAME=FlaskApp
+    env_file:
+      - .env
+    expose:
+      - 8000:5000
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:
