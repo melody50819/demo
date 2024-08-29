@@ -10,4 +10,6 @@ COPY . .
 ENV FLASK_APP=main:app
 ENV FLASK_RUN_HOST=0.0.0.0
 
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]
+EXPOSE 5000
+
+CMD ["python", "-m", "flask", "run"]
