@@ -53,7 +53,7 @@ MYSQL_DATABASE_URL = "mysql+mysqlconnector://root:admin@localhost:3306/product"
 ```bash
 docker compose up -d  # run project
 
-docker compose down -d # down project
+docker compose down # down project
 ```
 
 ## OpenAPI document
