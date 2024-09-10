@@ -1,4 +1,4 @@
-from utils import shared_engine
+from src.utils import shared_engine
 from sqlalchemy import text
 
 
@@ -24,17 +24,6 @@ def _get_all_products():
         with shared_engine.connect() as conn:
             result = conn.execute(text(stmt))
             return [dict(row) for row in result.fetchall()]
-            # result = conn.execute(text(stmt))
-            # return [{
-            #     "id": result["id"],
-            #     "code": row["code"],
-            #     "name": row["name"],
-            #     "category": row["category"],
-            #     "size": row["size"],
-            #     "unit_price": row["counit_pricede"],
-            #     "inventory": row["inventory"],
-            #     "color": row["color"]
-            # } for row in result.fetchall()]
     except:
         raise
 

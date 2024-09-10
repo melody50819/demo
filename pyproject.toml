@@ -6,10 +6,11 @@ authors = [
     {name = "yui", email = ""},
 ]
 dependencies = [
-    "apiflask>=2.2.0",
+    "APIFlask>=2.2.1",
     "SQLAlchemy>=2.0.32",
     "uvicorn>=0.30.6",
     "mysql-connector-python>=9.0.0",
+    "pytest>=8.3.2",
 ]
 requires-python = "==3.10.*"
 readme = "README.md"
