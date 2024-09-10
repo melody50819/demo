@@ -6,7 +6,8 @@ from sqlalchemy import create_engine, QueuePool
 MYSQL_DATABASE_URL = os.getenv('MYSQL_DATABASE_URL')
 
 shared_engine = create_engine(MYSQL_DATABASE_URL,
-                              pool=QueuePool,
+                              poolclass=QueuePool,
+                              pool_size=10,
                               pool_pre_ping=True)
 
 

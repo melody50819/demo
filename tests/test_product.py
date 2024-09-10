@@ -78,7 +78,7 @@ def test_update_product(client):
             "inventory": 40,
             "color": "Yellow"
         }
-        response = client.put('/product/1', json=product_data)
+        response = client.patch('/product/1', json=product_data)
         assert response.status_code == 204
 
 
