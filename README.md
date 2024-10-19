@@ -1,4 +1,4 @@
-# GainMiles-demo
+# demo
 
 ## Environment SetUp
 
